@@ -536,6 +536,7 @@ class Detail_interface(toga.Box):
         """任务界面确定按钮响应函数"""
         if len(self.name_bar.value)==0:
             self.window.info_dialog(title="空的任务名", message="您似乎没有输入任务名称捏~")
+            return
         #找到对应组
         group_dic = {f"({group.parent_goal.name}):{group.name}":group for group in DATA.all_groups}
         #新建任务
